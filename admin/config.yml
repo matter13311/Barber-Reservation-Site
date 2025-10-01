@@ -1,0 +1,33 @@
+backend:
+  name: github
+  repo: matter13311/Barber-Reservation-Site  # Your GitHub repo
+  branch: main  # Or 'master'
+
+media_folder: "static/img"  # Where images upload (create static/img folder)
+public_folder: "/img"
+
+site_url: https://franklinsquarebarber.netlify.app  # Your Netlify URL
+display_url: https://franklinsquarebarber.netlify.app
+
+collections:
+  - name: "services"  # For multiple services
+    label: "Services"
+    folder: "content/services"  # Saves as e.g., haircut.md
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - name: "about"  # Single about page
+    label: "About"
+    files:
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Image", name: "image", widget: "image"}
