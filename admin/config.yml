@@ -16,7 +16,6 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "body", widget: "markdown"}
       - {label: "Price", name: "price", widget: "number"}
-      - {label: "Image", name: "image", widget: "image"}
 
   - name: "about"  # Single about page
     label: "About"
