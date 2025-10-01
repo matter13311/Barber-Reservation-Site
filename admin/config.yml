@@ -1,32 +1,18 @@
 backend:
-  name: git-gateway  # Must be 'git-gateway', not 'github'
-  branch: main      # Your repo's default branch
+  name: github
+  repo: matter13311/Barber-Reservation-Site   # Replace with your GitHub repo
+  branch: main                    # Or "master" depending on your repo
 
-publish_mode: editorial_workflow  # Optional, enables draft/preview
-media_folder: "static/img"
-public_folder: "/img"
-
-site_url: https://franklinsquarebarber.netlify.app
-display_url: https://franklinsquarebarber.netlify.app
+media_folder: "images/uploads"    # Where images will be stored
+public_folder: "/images/uploads"
 
 collections:
-  - name: "services"
-    label: "Services"
-    folder: "content/services"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "body", widget: "markdown"}
-      - {label: "Price", name: "price", widget: "number"}
-      - {label: "Image", name: "image", widget: "image"}
-  - name: "about"
-    label: "About"
+  - name: "pages"
+    label: "Pages"
     files:
-      - file: "content/about.md"
-        label: "About Page"
-        name: "about"
+      - file: "index.html"
+        label: "Homepage"
+        name: "home"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Content", name: "body", widget: "markdown"}
-          - {label: "Image", name: "image", widget: "image"}
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
