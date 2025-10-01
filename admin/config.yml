@@ -1,8 +1,9 @@
 backend:
-  name: github
+  name: git-gateway
   repo: matter13311/Barber-Reservation-Site  # Your GitHub repo
   branch: main  # Or 'master'
 
+publish_mode: editorial_workflow  # Optional: Enables draft/preview workflow
 media_folder: "static/img"  # Where images upload (create static/img folder)
 public_folder: "/img"
 
