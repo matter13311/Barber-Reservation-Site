@@ -1,5 +1,5 @@
 ---
-title: Haircut and Shape Up
-price: 30
+title: Haircut and Hair Wash
+price: 35
 ---
-Haircut and shape up for beard.
+Haircut and hair wash.
