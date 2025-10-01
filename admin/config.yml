@@ -7,6 +7,28 @@ media_folder: "images/uploads"    # Where images will be stored
 public_folder: "/images/uploads"
 
 collections:
+  - name: "services"  # For multiple services
+    label: "Services"
+    folder: "content/services"  # Saves as e.g., haircut.md
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Price", name: "price", widget: "number"}
+      - {label: "Image", name: "image", widget: "image"}
+
+  - name: "about"  # Single about page
+    label: "About"
+    files:
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Content", name: "body", widget: "markdown"}
+          - {label: "Image", name: "image", widget: "image"}
+
   - name: "pages"
     label: "Pages"
     files:
